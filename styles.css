@@ -120,11 +120,21 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
   gap: clamp(28px, 6vw, 84px);
   align-items: center;
   min-height: 74vh;
   padding: clamp(54px, 8vw, 108px) clamp(20px, 5vw, 84px) clamp(30px, 5vw, 72px);
+}
+
+.profile-hero {
+  row-gap: 24px;
+}
+
+.hero-eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+  align-self: end;
 }
 
 .hero-content {
@@ -133,13 +143,13 @@ a {
 
 .profile-photo-panel {
   position: relative;
-  width: min(100%, 440px);
-  justify-self: center;
+  width: min(100%, 300px);
+  justify-self: end;
 }
 
 .profile-photo-panel::before {
   position: absolute;
-  inset: 18px -18px -18px 18px;
+  inset: 12px -12px -12px 12px;
   z-index: -1;
   border-radius: var(--radius);
   content: "";
@@ -508,7 +518,8 @@ h1 {
   }
 
   .profile-photo-panel {
-    width: min(100%, 360px);
+    width: min(100%, 260px);
+    justify-self: start;
   }
 
   .approach-grid {
@@ -580,6 +591,15 @@ h1 {
 
   .hero {
     padding-top: 42px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 0;
+  }
+
+  .profile-photo-panel {
+    width: min(100%, 220px);
+    justify-self: start;
   }
 
   h1 {
