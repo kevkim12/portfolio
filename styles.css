@@ -11,6 +11,9 @@
   --green: #8ee86f;
   --shadow: 0 22px 70px rgba(17, 20, 24, 0.12);
   --radius: 8px;
+  --page-gutter: clamp(32px, 7vw, 128px);
+  --content-max: 1180px;
+  --content-pad: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
   font-family: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   color: var(--ink);
@@ -49,7 +52,7 @@ a {
   align-items: center;
   justify-content: space-between;
   min-height: 72px;
-  padding: 0 clamp(20px, 4vw, 64px);
+  padding: 0 var(--content-pad);
   border-bottom: 1px solid rgba(220, 225, 231, 0.76);
   background: rgba(247, 248, 250, 0.82);
   backdrop-filter: blur(18px);
@@ -124,7 +127,7 @@ a {
   gap: clamp(28px, 6vw, 84px);
   align-items: center;
   min-height: 74vh;
-  padding: clamp(54px, 8vw, 108px) clamp(20px, 5vw, 84px) clamp(30px, 5vw, 72px);
+  padding: clamp(54px, 8vw, 108px) var(--content-pad) clamp(30px, 5vw, 72px);
 }
 
 .profile-hero {
@@ -300,8 +303,13 @@ h1 {
   border-right: 1px solid var(--line);
 }
 
+.proof-strip div:first-child {
+  padding-left: var(--content-pad);
+}
+
 .proof-strip div:last-child {
   border-right: 0;
+  padding-right: var(--content-pad);
 }
 
 .proof-strip strong,
@@ -320,22 +328,30 @@ h1 {
 }
 
 .section {
-  padding: clamp(72px, 9vw, 132px) clamp(20px, 5vw, 84px);
+  padding: clamp(72px, 9vw, 132px) var(--content-pad);
 }
 
 .section-heading {
   display: grid;
   gap: 4px;
   max-width: 760px;
-  margin-bottom: clamp(32px, 5vw, 56px);
+  margin-bottom: clamp(24px, 3vw, 38px);
 }
 
-.section-heading h2,
-.contact-section h2 {
-  margin-bottom: 0;
-  font-size: clamp(2rem, 4.8vw, 4.6rem);
-  line-height: 0.98;
-  letter-spacing: 0;
+#experience {
+  padding-top: clamp(54px, 7vw, 96px);
+  padding-bottom: clamp(54px, 7vw, 96px);
+}
+
+#experience .section-heading {
+  margin-bottom: 18px;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
 }
 
 .experience-ledger {
@@ -347,10 +363,10 @@ h1 {
 
 .experience-row {
   display: grid;
-  grid-template-columns: 136px 72px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: minmax(96px, 124px) 64px minmax(0, 1fr);
+  gap: 20px;
   align-items: start;
-  padding: 24px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -362,6 +378,7 @@ h1 {
   font-weight: 800;
   line-height: 1.2;
   text-transform: uppercase;
+  min-width: 0;
 }
 
 .experience-date span:first-child {
@@ -369,8 +386,8 @@ h1 {
 }
 
 .experience-logo {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   object-fit: cover;
@@ -380,12 +397,12 @@ h1 {
 .experience-summary {
   display: grid;
   grid-template-columns: minmax(190px, 0.42fr) minmax(260px, 1fr);
-  gap: clamp(18px, 4vw, 42px);
+  gap: clamp(16px, 3vw, 34px);
   min-width: 0;
 }
 
 .experience-title h3,
-.skill-matrix h3,
+.tech-panel h3,
 .approach-grid h3 {
   margin-bottom: 4px;
   font-size: clamp(1.1rem, 1.7vw, 1.34rem);
@@ -397,11 +414,12 @@ h1 {
   color: var(--muted);
   font-size: 0.94rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .accomplishment-block {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .accomplishment-block span {
@@ -415,37 +433,67 @@ h1 {
 .accomplishment-block p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.58;
+  font-size: 0.9rem;
+  line-height: 1.42;
+  overflow-wrap: anywhere;
 }
 
-.skill-matrix p,
 .approach-grid p {
   color: var(--muted);
   line-height: 1.7;
 }
 
-.split-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
-  gap: clamp(32px, 6vw, 84px);
-  align-items: start;
+.tech-panel {
+  position: sticky;
+  top: 96px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   background: var(--surface);
-  border-block: 1px solid var(--line);
+  box-shadow: 0 14px 42px rgba(17, 20, 24, 0.06);
 }
 
-.skill-matrix {
+.tech-panel .eyebrow {
+  margin-bottom: 18px;
+}
+
+.tech-board {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
-.skill-matrix div {
-  min-height: 210px;
-  padding: 24px;
+.tech-board article {
+  min-height: 0;
+  padding: 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg);
+}
+
+.tech-board h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 9px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--surface);
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .approach-section {
@@ -480,8 +528,8 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 28px;
-  align-items: end;
-  padding: clamp(72px, 10vw, 132px) clamp(20px, 5vw, 84px);
+  align-items: center;
+  padding: clamp(72px, 10vw, 132px) var(--content-pad);
   color: var(--surface);
   background: var(--ink);
 }
@@ -501,14 +549,27 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  padding: 28px clamp(20px, 5vw, 84px);
+  padding: 28px var(--content-pad);
   color: var(--muted);
   background: var(--surface);
 }
 
+@media (max-width: 1240px) {
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-panel {
+    position: static;
+  }
+
+  .tech-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1020px) {
   .hero,
-  .split-section,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -535,13 +596,13 @@ h1 {
   }
 
   .experience-row {
-    grid-template-columns: 112px 64px minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: 104px 56px minmax(0, 1fr);
+    gap: 16px;
   }
 
   .experience-logo {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
   }
 
   .experience-summary {
@@ -606,7 +667,7 @@ h1 {
     max-width: 10ch;
   }
 
-  .skill-matrix,
+  .tech-board,
   .proof-strip {
     grid-template-columns: 1fr;
   }
