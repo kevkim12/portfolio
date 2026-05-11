@@ -351,14 +351,19 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
   gap: clamp(28px, 4vw, 56px);
-  align-items: start;
+  align-items: stretch;
 }
 
 .experience-ledger {
   width: 100%;
   max-width: none;
+  height: 100%;
   margin-left: 0;
-  border-top: 1px solid var(--line);
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 14px 42px rgba(17, 20, 24, 0.06);
 }
 
 .experience-row {
@@ -366,8 +371,17 @@ h1 {
   grid-template-columns: minmax(96px, 124px) 64px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
-  padding: 16px 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.experience-row:first-child {
+  padding-top: 0;
+}
+
+.experience-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .experience-date {
@@ -446,6 +460,9 @@ h1 {
 .tech-panel {
   position: sticky;
   top: 96px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -460,7 +477,9 @@ h1 {
 .tech-board {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   gap: 10px;
+  flex: 1;
 }
 
 .tech-board article {
@@ -488,7 +507,7 @@ h1 {
   min-height: 32px;
   padding: 5px 9px;
   border: 1px solid rgba(17, 20, 24, 0.12);
-  border-radius: 999px;
+  border-radius: 5px;
   color: var(--muted);
   background: var(--surface);
   font-size: 0.82rem;
@@ -561,6 +580,7 @@ h1 {
 
   .tech-panel {
     position: static;
+    height: auto;
   }
 
   .tech-board {
