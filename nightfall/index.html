@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kevin Kim's Nightfall Video Game project." />
+    <title>Nightfall Video Game | Kevin Kim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Kevin Kim home">
+        <span class="brand-mark">KK</span>
+        <span>Kevin Kim</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#top">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="company-hero">
+        <a class="back-link" href="../index.html#projects">Back to projects</a>
+        <div class="company-hero-card project-detail-card">
+          <div class="project-detail-visual project-media-nightfall" aria-hidden="true"></div>
+          <div class="company-copy">
+            <p class="eyebrow">Project</p>
+            <h1>Nightfall Video Game</h1>
+            <p>
+              A round-based zombie shooter built with Lua and Rojo, focused on scalable gameplay
+              systems, NPC behavior, pathfinding, and server-side security.
+            </p>
+            <div class="company-meta-grid">
+              <div>
+                <span>Stack</span>
+                <strong>Lua, Rojo</strong>
+              </div>
+              <div>
+                <span>Focus</span>
+                <strong>NPC AI, pathfinding, validation</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading">
+          <p class="eyebrow">Full Project Points</p>
+          <h2>Build Notes</h2>
+        </div>
+        <div class="detail-panel">
+          <ul class="detail-point-list">
+            <li>Developed a round-based zombie shooter using Lua and the Rojo framework to support scalable game development.</li>
+            <li>Built six distinct zombie NPC classes with complex behaviors, creating dynamic and unpredictable gameplay challenges.</li>
+            <li>Engineered a dynamic zombie NPC targeting system using decision trees, priority scoring, and pathfinding.</li>
+            <li>Implemented a secure store system with server-side validation and hardened remote events to prevent exploits and unauthorized access to content.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Kevin Kim</span>
+      <span>Software Engineer</span>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

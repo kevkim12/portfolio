@@ -37,7 +37,7 @@
 
     <main id="top">
       <section class="hero profile-hero" aria-labelledby="hero-title">
-        <p class="eyebrow hero-eyebrow">Software Engineer</p>
+        <p class="section-title hero-section-title">About</p>
 
         <div class="hero-content profile-intro">
           <h1 id="hero-title">Kevin Kim</h1>
@@ -92,24 +92,9 @@
         </div>
       </section>
 
-      <section class="proof-strip" aria-label="Engineering strengths">
-        <div>
-          <strong>Enterprise applications</strong>
-          <span>Spring MVC, React, internal tools</span>
-        </div>
-        <div>
-          <strong>Workflow automation</strong>
-          <span>Twilio alerts, SAP APIs, CI/CD</span>
-        </div>
-        <div>
-          <strong>Performance engineering</strong>
-          <span>WebSockets, Oracle tuning, APM</span>
-        </div>
-      </section>
-
       <section id="experience" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Experience</p>
+          <h2 class="section-title">Experience</h2>
         </div>
 
         <div class="career-grid">
@@ -126,9 +111,12 @@
                     <h3>Game Developer</h3>
                     <p>Phantomline Interactive</p>
                   </div>
-                  <div class="experience-date">
-                    <span>Apr 2026</span>
-                    <span>Present</span>
+                  <div class="experience-actions">
+                    <div class="experience-date">
+                      <span>Apr 2026</span>
+                      <span>Present</span>
+                    </div>
+                    <a class="experience-link" href="phantomline-interactive/index.html">View more</a>
                   </div>
                 </div>
                 <div class="accomplishment-block">
@@ -136,7 +124,6 @@
                     <li>Temporary placeholder for gameplay systems, debugging, optimization, and release support.</li>
                   </ul>
                 </div>
-                <a class="experience-link" href="phantomline-interactive/index.html">View more</a>
               </div>
             </article>
 
@@ -148,9 +135,12 @@
                     <h3>Software Engineer</h3>
                     <p>Qcells</p>
                   </div>
-                  <div class="experience-date">
-                    <span>May 2024</span>
-                    <span>Present</span>
+                  <div class="experience-actions">
+                    <div class="experience-date">
+                      <span>May 2024</span>
+                      <span>Present</span>
+                    </div>
+                    <a class="experience-link" href="qcells/index.html">View more</a>
                   </div>
                 </div>
                 <div class="accomplishment-block">
@@ -161,7 +151,6 @@
                     <li>Led Jenkins CI/CD updates and Swagger/OpenAPI deployment validation.</li>
                   </ul>
                 </div>
-                <a class="experience-link" href="qcells/index.html">View more</a>
               </div>
             </article>
 
@@ -173,9 +162,12 @@
                     <h3>Software Engineer Intern</h3>
                     <p>Metro Tech</p>
                   </div>
-                  <div class="experience-date">
-                    <span>May 2023</span>
-                    <span>Aug 2023</span>
+                  <div class="experience-actions">
+                    <div class="experience-date">
+                      <span>May 2023</span>
+                      <span>Aug 2023</span>
+                    </div>
+                    <a class="experience-link" href="metro-tech/index.html">View more</a>
                   </div>
                 </div>
                 <div class="accomplishment-block">
@@ -186,7 +178,6 @@
                     <li>Built SAP-backed inventory REST APIs that improved tracking and cut costs 12%.</li>
                   </ul>
                 </div>
-                <a class="experience-link" href="metro-tech/index.html">View more</a>
               </div>
             </article>
 
@@ -202,9 +193,12 @@
                     <h3>Game Developer Intern</h3>
                     <p>Phantomline Interactive</p>
                   </div>
-                  <div class="experience-date">
-                    <span>Jan 2023</span>
-                    <span>May 2023</span>
+                  <div class="experience-actions">
+                    <div class="experience-date">
+                      <span>Jan 2023</span>
+                      <span>May 2023</span>
+                    </div>
+                    <a class="experience-link" href="phantomline-interactive/index.html">View more</a>
                   </div>
                 </div>
                 <div class="accomplishment-block">
@@ -215,7 +209,6 @@
                     <li>Improved UI quality through community feedback and iteration.</li>
                   </ul>
                 </div>
-                <a class="experience-link" href="phantomline-interactive/index.html">View more</a>
               </div>
             </article>
           </div>
@@ -282,55 +275,41 @@
 
       <section id="projects" class="section project-section">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
+          <h2 class="section-title">Projects</h2>
         </div>
 
         <div class="project-grid" aria-label="Selected projects">
           <article class="project-card">
-            <span class="project-number">01</span>
-            <h3>JobNow Application</h3>
-            <p>
-              Built a job board web application to connect job seekers with relevant opportunities,
-              with automated endpoint validation and external job-posting aggregation.
-            </p>
-            <div class="project-tags">
-              <span>Vite.js</span>
-              <span>Flask</span>
-              <span>SQLite</span>
-              <span>Vitest</span>
-              <span>Postman</span>
-              <span>JSearch API</span>
+            <div class="project-card-media project-media-jobnow" aria-hidden="true"></div>
+            <div class="project-card-body">
+              <h3>JobNow Application</h3>
+              <p>
+                Job board web app for connecting candidates with relevant listings, backed by
+                automated endpoint validation and external job aggregation.
+              </p>
+              <a class="project-link" href="jobnow/index.html">View more</a>
             </div>
           </article>
           <article class="project-card">
-            <span class="project-number">02</span>
-            <h3>Safe Flight Application</h3>
-            <p>
-              Developed a travel safety web application that scores destinations using real-time
-              weather, crime, conflict, and political risk data.
-            </p>
-            <div class="project-tags">
-              <span>React</span>
-              <span>Flask</span>
-              <span>MongoDB</span>
-              <span>Google OAuth</span>
-              <span>Airlabs API</span>
-              <span>Travel Advisory API</span>
+            <div class="project-card-media project-media-safe-flight" aria-hidden="true"></div>
+            <div class="project-card-body">
+              <h3>Safe Flight Application</h3>
+              <p>
+                Travel safety app that scores destinations using real-time weather, advisory,
+                crime, conflict, and political risk signals.
+              </p>
+              <a class="project-link" href="safe-flight/index.html">View more</a>
             </div>
           </article>
           <article class="project-card">
-            <span class="project-number">03</span>
-            <h3>Nightfall Video Game</h3>
-            <p>
-              Developed a round-based zombie shooter with scalable game systems, dynamic NPC
-              behavior, pathfinding, and secure server-side store validation.
-            </p>
-            <div class="project-tags">
-              <span>Lua</span>
-              <span>Rojo</span>
-              <span>Decision Trees</span>
-              <span>Pathfinding</span>
-              <span>Security</span>
+            <div class="project-card-media project-media-nightfall" aria-hidden="true"></div>
+            <div class="project-card-body">
+              <h3>Nightfall Video Game</h3>
+              <p>
+                Round-based zombie shooter with scalable game systems, dynamic NPC behavior,
+                pathfinding, and hardened server-side validation.
+              </p>
+              <a class="project-link" href="nightfall/index.html">View more</a>
             </div>
           </article>
         </div>
