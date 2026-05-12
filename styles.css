@@ -315,45 +315,6 @@ h1 {
   line-height: 1.45;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 18px;
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
-  font-weight: 800;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-}
-
-.button:hover,
-.button:focus-visible {
-  transform: translateY(-2px);
-  outline: none;
-}
-
-.button.primary {
-  color: var(--surface);
-  background: var(--ink);
-  box-shadow: 8px 8px 0 var(--teal);
-}
-
-.button.secondary {
-  background: var(--surface);
-}
-
-.button.secondary:hover,
-.button.secondary:focus-visible {
-  box-shadow: 8px 8px 0 var(--amber);
-}
-
 .proof-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -412,10 +373,7 @@ h1 {
 }
 
 .career-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
-  gap: clamp(28px, 4vw, 56px);
-  align-items: stretch;
+  display: block;
 }
 
 .experience-ledger {
@@ -430,7 +388,7 @@ h1 {
   grid-template-columns: minmax(96px, 124px) 64px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
-  padding: 16px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -438,10 +396,10 @@ h1 {
   display: grid;
   gap: 4px;
   color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-transform: uppercase;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
   min-width: 0;
 }
 
@@ -462,10 +420,22 @@ h1 {
   display: grid;
   grid-template-columns: minmax(190px, 0.42fr) minmax(260px, 1fr);
   gap: clamp(16px, 3vw, 34px);
+  align-items: start;
   min-width: 0;
 }
 
-.experience-title h3,
+.experience-title {
+  display: grid;
+  gap: 5px;
+}
+
+.experience-title h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.02rem, 1.35vw, 1.18rem);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
 .tech-panel h3,
 .project-grid h3 {
   margin-bottom: 4px;
@@ -476,30 +446,47 @@ h1 {
 .experience-title p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.94rem;
-  font-weight: 800;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
 .accomplishment-block {
   display: grid;
-  gap: 6px;
+  gap: 0;
 }
 
-.accomplishment-block span {
-  color: var(--ink);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.accomplishment-block p {
+.accomplishment-block p,
+.accomplishment-block ul {
   margin: 0;
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.42;
+  font-size: 0.95rem;
+  line-height: 1.58;
   overflow-wrap: anywhere;
+}
+
+.accomplishment-block ul {
+  display: grid;
+  gap: 7px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.accomplishment-block li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.accomplishment-block li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  content: "";
+  background: var(--teal);
 }
 
 .project-grid p {
@@ -508,12 +495,8 @@ h1 {
 }
 
 .tech-panel {
-  position: sticky;
-  top: 96px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 18px;
+  margin-top: clamp(28px, 4vw, 48px);
+  padding: 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -526,10 +509,8 @@ h1 {
 
 .tech-board {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 10px;
-  flex: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .tech-board article {
@@ -626,15 +607,6 @@ h1 {
 }
 
 @media (max-width: 1240px) {
-  .career-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tech-panel {
-    position: static;
-    height: auto;
-  }
-
   .tech-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
