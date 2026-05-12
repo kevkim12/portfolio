@@ -377,34 +377,52 @@ h1 {
 }
 
 .experience-ledger {
+  display: grid;
+  gap: 12px;
   width: 100%;
   max-width: none;
   margin-left: 0;
-  border-top: 1px solid var(--line);
 }
 
 .experience-row {
   display: grid;
-  grid-template-columns: minmax(96px, 124px) 64px minmax(0, 1fr);
-  gap: 20px;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 18px;
   align-items: start;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 18px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 34px rgba(17, 20, 24, 0.055);
 }
 
 .experience-date {
-  display: grid;
-  gap: 4px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-self: end;
+  row-gap: 4px;
+  min-height: 30px;
+  padding: 6px 9px;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: 4px;
   color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 500;
-  line-height: 1.35;
+  background: var(--bg);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
   font-variant-numeric: tabular-nums;
-  min-width: 0;
+  white-space: nowrap;
 }
 
 .experience-date span:first-child {
   color: var(--ink);
+}
+
+.experience-date span + span::before {
+  margin: 0 7px 0 3px;
+  color: rgba(95, 104, 115, 0.68);
+  content: "-";
 }
 
 .experience-logo {
@@ -414,25 +432,31 @@ h1 {
   border-radius: var(--radius);
   object-fit: cover;
   background: var(--surface);
+  box-shadow: 0 8px 18px rgba(17, 20, 24, 0.08);
 }
 
 .experience-summary {
   display: grid;
-  grid-template-columns: minmax(190px, 0.42fr) minmax(260px, 1fr);
-  gap: clamp(16px, 3vw, 34px);
-  align-items: start;
+  gap: 13px;
   min-width: 0;
+}
+
+.experience-meta {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .experience-title {
   display: grid;
-  gap: 5px;
+  gap: 4px;
 }
 
 .experience-title h3 {
   margin-bottom: 0;
-  font-size: clamp(1.02rem, 1.35vw, 1.18rem);
-  font-weight: 650;
+  font-size: clamp(1.08rem, 1.35vw, 1.2rem);
+  font-weight: 700;
   line-height: 1.25;
 }
 
@@ -446,7 +470,7 @@ h1 {
 .experience-title p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 500;
   line-height: 1.4;
   overflow-wrap: anywhere;
@@ -461,16 +485,21 @@ h1 {
 .accomplishment-block ul {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.58;
+  font-size: 0.92rem;
+  line-height: 1.55;
   overflow-wrap: anywhere;
 }
 
 .accomplishment-block ul {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 7px;
   padding-left: 0;
   list-style: none;
+}
+
+.accomplishment-block p {
+  max-width: 72ch;
 }
 
 .accomplishment-block li {
@@ -639,8 +668,9 @@ h1 {
   }
 
   .experience-row {
-    grid-template-columns: 104px 56px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
   }
 
   .experience-logo {
@@ -649,10 +679,12 @@ h1 {
   }
 
   .experience-summary {
-    grid-template-columns: 1fr;
     gap: 12px;
   }
 
+  .accomplishment-block ul {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {
@@ -719,29 +751,36 @@ h1 {
   }
 
   .experience-row {
-    grid-template-columns: 56px minmax(0, 1fr);
-    gap: 14px;
-    padding: 20px 0;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .experience-meta {
+    display: grid;
+    gap: 8px;
   }
 
   .experience-date {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    display: flex;
-    gap: 8px;
-    font-size: 0.76rem;
+    justify-self: start;
+    font-size: 0.74rem;
   }
 
   .experience-logo {
     grid-column: 1;
-    grid-row: 2;
-    width: 56px;
-    height: 56px;
+    grid-row: 1;
+    width: 52px;
+    height: 52px;
   }
 
   .experience-summary {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
+  }
+
+  .accomplishment-block p,
+  .accomplishment-block ul {
+    font-size: 0.9rem;
   }
 
   .proof-strip div,
@@ -756,6 +795,18 @@ h1 {
 
   .site-footer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-logo,
+  .experience-summary {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 
