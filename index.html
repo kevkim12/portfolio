@@ -31,8 +31,7 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#experience">Experience</a>
         <a href="#skills">Tools</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
       </nav>
     </header>
 
@@ -61,12 +60,40 @@
 
           <div class="hero-actions" aria-label="Portfolio actions">
             <a class="button primary" href="#experience">View experience</a>
-            <a class="button secondary" href="#contact">Get in touch</a>
+            <a class="button secondary" href="mailto:kevkim1201@gmail.com">Email me</a>
           </div>
         </div>
 
         <div class="profile-photo-panel">
-          <img src="assets/kevin-kim.jpg" alt="Kevin Kim" class="profile-photo" />
+          <div class="profile-photo-frame">
+            <img src="assets/kevin-kim.jpg" alt="Kevin Kim" class="profile-photo" />
+          </div>
+          <div class="social-links" aria-label="Social links">
+            <a
+              href="https://github.com/kevkim12"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <img src="assets/github.svg" alt="" />
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kevkim12"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <img src="assets/linkedin.svg" alt="" />
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <a href="mailto:kevkim1201@gmail.com" aria-label="Email" title="Email">
+              <img src="assets/email.svg" alt="" />
+              <span class="sr-only">Email</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -233,36 +260,54 @@
         </div>
       </section>
 
-      <section id="approach" class="section approach-section">
+      <section id="projects" class="section project-section">
         <div class="section-heading">
-          <p class="eyebrow">Approach</p>
+          <p class="eyebrow">Projects</p>
         </div>
 
-        <div class="approach-grid">
-          <article>
-            <span>01</span>
-            <h3>Clarify the problem</h3>
-            <p>Map the users, constraints, failure modes, and real success criteria before coding.</p>
+        <div class="project-grid" aria-label="Selected projects">
+          <article class="project-card">
+            <span class="project-number">01</span>
+            <h3>Operations Dashboard</h3>
+            <p>
+              Temporary project description for an internal dashboard that tracks metrics,
+              workflow status, and action items in one place.
+            </p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>APIs</span>
+              <span>Reporting</span>
+            </div>
           </article>
-          <article>
-            <span>02</span>
-            <h3>Build the path</h3>
-            <p>Favor simple architecture, strong naming, clean interfaces, and useful tests.</p>
+          <article class="project-card">
+            <span class="project-number">02</span>
+            <h3>Automation Toolkit</h3>
+            <p>
+              Temporary project description for scripts and scheduled jobs that reduce manual
+              work, improve accuracy, and make routine processes easier to maintain.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Excel</span>
+              <span>Automation</span>
+            </div>
           </article>
-          <article>
-            <span>03</span>
-            <h3>Raise the floor</h3>
-            <p>Improve developer experience, documentation, and operations as the product matures.</p>
+          <article class="project-card">
+            <span class="project-number">03</span>
+            <h3>Gameplay Prototype</h3>
+            <p>
+              Temporary project description for a gameplay prototype with interactive systems,
+              iteration tools, and polish passes for player feedback.
+            </p>
+            <div class="project-tags">
+              <span>Unity</span>
+              <span>C#</span>
+              <span>Game Systems</span>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="contact-section">
-        <div>
-          <p class="eyebrow">Contact</p>
-        </div>
-        <a class="button primary" href="mailto:kevkim1201@gmail.com">kevkim1201@gmail.com</a>
-      </section>
     </main>
 
     <footer class="site-footer">
