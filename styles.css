@@ -14,7 +14,7 @@
   --page-gutter: clamp(32px, 7vw, 128px);
   --content-max: 1180px;
   --content-pad: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
-  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   color: var(--ink);
   background: var(--bg);
@@ -375,13 +375,6 @@ h1 {
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 12px 32px rgba(17, 20, 24, 0.045);
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.experience-row:hover {
-  transform: translateY(-1px);
-  border-color: rgba(21, 163, 148, 0.32);
-  box-shadow: 0 18px 42px rgba(17, 20, 24, 0.075);
 }
 
 .experience-date {
@@ -1966,14 +1959,14 @@ h1 {
 .detail-panel,
 .detail-point-list li,
 .site-nav {
-  border-width: 2px;
-  border-color: rgba(17, 20, 24, 0.22);
+  border-width: 1px;
+  border-color: #000;
   border-radius: 0;
 }
 
 .profile-photo {
-  border-width: 3px;
-  border-color: var(--ink);
+  border-width: 2px;
+  border-color: #000;
 }
 
 .brand-mark,
@@ -1989,7 +1982,8 @@ h1 {
 .gallery-control,
 .gallery-thumbs button,
 .nightfall-clip-list a {
-  border-width: 2px;
+  border-width: 1px;
+  border-color: #000;
   border-radius: 0;
 }
 
