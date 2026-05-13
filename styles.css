@@ -636,7 +636,8 @@ h1 {
 
 .project-card-media {
   position: relative;
-  min-height: 178px;
+  height: 178px;
+  min-height: 0;
   border-bottom: 1px solid rgba(17, 20, 24, 0.12);
   overflow: hidden;
   background: var(--surface);
@@ -730,6 +731,22 @@ h1 {
   bottom: 34px;
   border: 2px solid rgba(255, 106, 85, 0.55);
   transform: rotate(18deg);
+}
+
+.project-media-nightfall-thumb {
+  background: #101214;
+}
+
+.project-media-nightfall-thumb img {
+  object-fit: contain;
+}
+
+.project-media-photoshare-thumb img {
+  object-fit: fill;
+}
+
+.project-media-jobnow-thumb img {
+  object-position: center top;
 }
 
 .project-card-body {
@@ -864,6 +881,17 @@ h1 {
   outline: none;
 }
 
+.project-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.project-action-row .repo-button {
+  margin-top: 0;
+}
+
 .screenshot-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -899,6 +927,12 @@ h1 {
   background:
     linear-gradient(135deg, rgba(21, 163, 148, 0.07), transparent 34%),
     linear-gradient(315deg, rgba(242, 184, 75, 0.08), transparent 32%);
+}
+
+.jobnow-page {
+  background:
+    linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(255, 106, 85, 0.07), transparent 32%);
 }
 
 .photoshare-hero,
@@ -1264,6 +1298,231 @@ h1 {
   align-self: start;
 }
 
+.nightfall-page {
+  background:
+    linear-gradient(135deg, rgba(255, 106, 85, 0.07), transparent 32%),
+    linear-gradient(315deg, rgba(21, 163, 148, 0.08), transparent 34%);
+}
+
+.nightfall-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.nightfall-card-grid article {
+  display: grid;
+  gap: 16px;
+  min-height: 310px;
+  padding: 18px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(17, 20, 24, 0.055);
+}
+
+.nightfall-card-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: var(--radius);
+  object-fit: contain;
+  background:
+    linear-gradient(90deg, rgba(17, 20, 24, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(17, 20, 24, 0.035) 1px, transparent 1px),
+    #fbfcfd;
+  background-size: 24px 24px;
+}
+
+.nightfall-card-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nightfall-card-grid h3,
+.nightfall-equipment-panel h3,
+.nightfall-map-panel h3,
+.nightfall-map-grid h3,
+.nightfall-clip-panel h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.nightfall-card-grid p,
+.nightfall-equipment-panel p,
+.nightfall-map-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.nightfall-content-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.nightfall-equipment-panel,
+.nightfall-map-panel,
+.nightfall-map-grid article,
+.nightfall-clip-panel {
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(17, 20, 24, 0.055);
+}
+
+.nightfall-equipment-panel {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.nightfall-map-panel {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.nightfall-equipment-strip {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.nightfall-equipment-strip figure {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-width: 0;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: 5px;
+  background: var(--bg);
+}
+
+.nightfall-equipment-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: 5px;
+  object-fit: contain;
+  background: var(--surface);
+}
+
+.nightfall-equipment-strip figcaption {
+  display: grid;
+  gap: 3px;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.nightfall-equipment-strip figcaption span {
+  color: var(--teal);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nightfall-map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nightfall-map-grid article {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 10px;
+  background: var(--bg);
+}
+
+.nightfall-map-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: 5px;
+  object-fit: contain;
+  background:
+    linear-gradient(90deg, rgba(17, 20, 24, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(17, 20, 24, 0.035) 1px, transparent 1px),
+    var(--surface);
+  background-size: 24px 24px;
+}
+
+.nightfall-map-grid h3,
+.nightfall-map-grid p {
+  margin: 0;
+}
+
+.nightfall-map-grid h3 {
+  font-size: 1rem;
+}
+
+.nightfall-map-grid p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.nightfall-build-panel {
+  grid-template-columns: 1fr minmax(240px, 0.35fr);
+}
+
+.nightfall-build-panel .photoshare-section-heading {
+  grid-column: 1 / -1;
+}
+
+.nightfall-clip-panel {
+  align-self: start;
+  padding: 18px;
+}
+
+.nightfall-clip-list {
+  display: grid;
+  gap: 8px;
+}
+
+.nightfall-clip-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 11px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: 4px;
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 0.86rem;
+  font-weight: 800;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.nightfall-clip-list a:hover,
+.nightfall-clip-list a:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(21, 163, 148, 0.44);
+  box-shadow: 4px 4px 0 rgba(21, 163, 148, 0.18);
+  outline: none;
+}
+
 .company-logo-large {
   width: 104px;
   height: 104px;
@@ -1417,6 +1676,14 @@ h1 {
   .photoshare-capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .nightfall-equipment-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nightfall-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 1020px) {
@@ -1466,6 +1733,7 @@ h1 {
 
   .company-hero-card,
   .detail-role-block,
+  .nightfall-content-layout,
   .photoshare-hero-panel,
   .photoshare-gallery-layout,
   .photoshare-implementation-panel {
@@ -1478,6 +1746,14 @@ h1 {
 
   .gallery-thumbs {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nightfall-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nightfall-map-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .gallery-thumbs button {
@@ -1618,6 +1894,11 @@ h1 {
   }
 
   .photoshare-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nightfall-card-grid,
+  .nightfall-map-grid {
     grid-template-columns: 1fr;
   }
 

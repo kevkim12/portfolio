@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kevin Kim's JobNow Application project." />
-    <title>JobNow Application | Kevin Kim</title>
+    <meta name="description" content="Kevin Kim's JobNow project." />
+    <title>JobNow | Kevin Kim</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
+  <body class="project-detail-page">
     <header class="site-header">
       <a class="brand" href="../index.html#top" aria-label="Kevin Kim home">
         <span class="brand-mark">KK</span>
@@ -30,42 +30,197 @@
       </nav>
     </header>
 
-    <main class="detail-main">
-      <section class="company-hero">
-        <a class="back-link" href="../index.html#projects">Back to projects</a>
-        <div class="company-hero-card project-detail-card">
-          <div class="project-detail-visual project-media-jobnow" aria-hidden="true"></div>
-          <div class="company-copy">
-            <p class="eyebrow">Project</p>
-            <h1>JobNow Application</h1>
-            <p>
-              A job board web application built to connect job seekers with relevant opportunities
-              through external listing aggregation and API-backed workflows.
+    <main class="detail-main photoshare-page jobnow-page">
+      <section class="photoshare-hero">
+        <a class="back-link photoshare-back" href="../index.html#projects">Back to projects</a>
+        <div class="photoshare-hero-panel">
+          <div class="photoshare-intro">
+            <p class="eyebrow">Project Case Study</p>
+            <h1>JobNow</h1>
+            <p class="photoshare-lede">
+              A work marketplace for people who want to move quickly between flexible local gigs
+              and longer-term job opportunities, with a polished landing page, searchable gig
+              board, JSearch-powered job search, account flows, and saved gigs.
             </p>
-            <div class="company-meta-grid">
-              <div>
-                <span>Stack</span>
-                <strong>Vite.js, Flask, SQLite</strong>
-              </div>
-              <div>
-                <span>Focus</span>
-                <strong>Job search, API testing, aggregation</strong>
-              </div>
+            <div class="photoshare-stack-line" aria-label="Technology stack">
+              <span>Built with</span>
+              <ul>
+                <li>React</li>
+                <li>Vite</li>
+                <li>React Router</li>
+                <li>Tailwind CSS</li>
+                <li>Ant Design</li>
+                <li>Flask</li>
+                <li>SQLite</li>
+                <li>RapidAPI JSearch</li>
+              </ul>
+            </div>
+            <div class="project-action-row">
+              <a
+                class="repo-button repo-button-strong"
+                href="https://github.com/kevkim12/jobnow"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="../assets/github.svg" alt="" />
+                <span>View GitHub</span>
+              </a>
+              <a
+                class="repo-button"
+                href="https://jobnow.onrender.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Live Site</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="detail-section">
-        <div class="detail-section-heading">
-          <p class="eyebrow">Full Project Points</p>
-          <h2>Build Notes</h2>
+      <section class="photoshare-showcase-section" aria-labelledby="jobnow-interface-title">
+        <div class="photoshare-section-heading">
+          <p class="eyebrow">Interface Tour</p>
+          <h2 id="jobnow-interface-title">Selected Screens</h2>
+          <p>
+            The core product flow moves from a brand-forward landing page into gig discovery,
+            external job search, and account access for saving promising opportunities.
+          </p>
         </div>
-        <div class="detail-panel">
-          <ul class="detail-point-list">
-            <li>Built a job board web application with Vite.js, Flask, and SQLite to connect job seekers with relevant opportunities.</li>
-            <li>Developed automated API tests with Vitest and Postman, validating endpoints for reliability and preventing failures.</li>
-            <li>Implemented the JSearch API to aggregate job postings, automating workflow and improving access to listings.</li>
+
+        <div class="photoshare-gallery-layout">
+          <section class="photoshare-showcase" aria-label="JobNow screenshot preview">
+            <div class="gallery-window">
+              <div class="gallery-browser-bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="gallery-stage">
+                <img
+                  src="../assets/jobnow/screenshots/01-home.png"
+                  alt="JobNow home page"
+                  data-gallery-image
+                />
+                <button
+                  class="gallery-control gallery-control-prev"
+                  type="button"
+                  aria-label="Previous screenshot"
+                  data-gallery-prev
+                >
+                  &lt;
+                </button>
+                <button
+                  class="gallery-control gallery-control-next"
+                  type="button"
+                  aria-label="Next screenshot"
+                  data-gallery-next
+                >
+                  &gt;
+                </button>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <strong data-gallery-title>Home</strong>
+              <span data-gallery-caption>Landing page with paths into gigs, jobs, and login.</span>
+            </div>
+          </section>
+
+          <div class="gallery-thumbs" aria-label="Choose screenshot">
+            <button
+              class="is-active"
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/jobnow/screenshots/01-home.png"
+              data-alt="JobNow home page"
+              data-title="Home"
+              data-caption="Landing page with paths into gigs, jobs, and login."
+            >
+              <img src="../assets/jobnow/screenshots/01-home.png" alt="" />
+              <span>Home</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/jobnow/screenshots/02-gigs.png"
+              data-alt="JobNow gigs board"
+              data-title="Gig Board"
+              data-caption="Searchable local gig posts with pricing, location, and save actions."
+            >
+              <img src="../assets/jobnow/screenshots/02-gigs.png" alt="" />
+              <span>Gigs</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/jobnow/screenshots/03-jobs.png"
+              data-alt="JobNow job search page"
+              data-title="Job Search"
+              data-caption="External job-search results with query shortcuts and direct apply links."
+            >
+              <img src="../assets/jobnow/screenshots/03-jobs.png" alt="" />
+              <span>Jobs</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/jobnow/screenshots/04-login.png"
+              data-alt="JobNow login page"
+              data-title="Login"
+              data-caption="Account access for saved gigs and personalized workspace features."
+            >
+              <img src="../assets/jobnow/screenshots/04-login.png" alt="" />
+              <span>Login</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="photoshare-capabilities" aria-labelledby="jobnow-capabilities-title">
+        <div class="photoshare-section-heading">
+          <p class="eyebrow">Product Areas</p>
+          <h2 id="jobnow-capabilities-title">What It Covers</h2>
+        </div>
+        <div class="photoshare-capability-grid">
+          <article>
+            <span>01</span>
+            <h3>Gig Marketplace</h3>
+            <p>Searchable short-term work posts with pricing, location details, descriptions, and save actions.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Job Search</h3>
+            <p>JSearch API integration for longer-term roles, query shortcuts, and direct application links.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Account Flows</h3>
+            <p>Signup and login backed by a Flask API and SQLite database for user-specific actions.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Saved Workspace</h3>
+            <p>Bookmarking and saved gigs pages help users keep promising opportunities organized.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="photoshare-implementation" aria-labelledby="jobnow-build-title">
+        <div class="photoshare-implementation-panel">
+          <div class="photoshare-section-heading">
+            <p class="eyebrow">Build Notes</p>
+            <h2 id="jobnow-build-title">Implementation Details</h2>
+            <p>
+              JobNow pairs a React and Vite client with a Flask service layer, SQLite persistence,
+              Axios-driven API calls, and Render deployment for the production build.
+            </p>
+          </div>
+          <ul class="detail-point-list photoshare-point-list">
+            <li>Built responsive routes for the landing page, gigs board, job search, login, signup, and saved gigs.</li>
+            <li>Created a create-gig modal for posting short-term opportunities into the marketplace flow.</li>
+            <li>Connected user signup, login, saved gig loading, bookmarking, and removal through Flask API endpoints.</li>
+            <li>Integrated RapidAPI JSearch results so users can find full-time, part-time, and remote opportunities.</li>
+            <li>Validated API behavior with Vitest and Postman to reduce endpoint regressions during development.</li>
           </ul>
         </div>
       </section>
