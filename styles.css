@@ -10,7 +10,7 @@
   --amber: #f2b84b;
   --green: #8ee86f;
   --shadow: 0 22px 70px rgba(17, 20, 24, 0.12);
-  --radius: 8px;
+  --radius: 0px;
   --page-gutter: clamp(32px, 7vw, 128px);
   --content-max: 1180px;
   --content-pad: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
@@ -185,7 +185,6 @@ a {
   position: absolute;
   inset: 12px -12px -12px 12px;
   z-index: -1;
-  border-radius: var(--radius);
   content: "";
   background: var(--teal);
 }
@@ -194,8 +193,7 @@ a {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
+  border: 3px solid var(--ink);
   object-fit: cover;
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -378,14 +376,6 @@ h1 {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 12px 32px rgba(17, 20, 24, 0.045);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.experience-row::before {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  content: "";
-  background: linear-gradient(180deg, var(--teal), rgba(21, 163, 148, 0.18));
 }
 
 .experience-row:hover {
@@ -1942,6 +1932,65 @@ h1 {
   .gallery-thumbs {
     grid-template-columns: 1fr;
   }
+}
+
+.site-header,
+.profile-photo,
+.profile-facts div,
+.experience-row,
+.experience-logo,
+.tech-panel,
+.tech-board article,
+.project-card,
+.project-card-media,
+.company-hero-card,
+.project-detail-visual,
+.screenshot-card img,
+.photoshare-hero-panel,
+.photoshare-showcase,
+.gallery-window,
+.gallery-thumbs img,
+.photoshare-capability-grid article,
+.photoshare-implementation-panel,
+.nightfall-card-grid article,
+.nightfall-card-grid img,
+.nightfall-equipment-panel,
+.nightfall-map-panel,
+.nightfall-map-grid article,
+.nightfall-clip-panel,
+.nightfall-equipment-strip figure,
+.nightfall-equipment-strip img,
+.nightfall-map-grid img,
+.company-logo-large,
+.company-meta-grid div,
+.detail-panel,
+.detail-point-list li,
+.site-nav {
+  border-width: 2px;
+  border-color: rgba(17, 20, 24, 0.22);
+  border-radius: 0;
+}
+
+.profile-photo {
+  border-width: 3px;
+  border-color: var(--ink);
+}
+
+.brand-mark,
+.site-nav a,
+.menu-button,
+.social-links a,
+.experience-date,
+.experience-link,
+.tech-list span,
+.project-tags span,
+.project-link,
+.repo-button,
+.gallery-control,
+.gallery-thumbs button,
+.nightfall-clip-list a {
+  border-width: 2px;
+  border-radius: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
