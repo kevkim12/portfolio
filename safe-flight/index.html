@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
+  <body class="project-detail-page">
     <header class="site-header">
       <a class="brand" href="../index.html#top" aria-label="Kevin Kim home">
         <span class="brand-mark">KK</span>
@@ -24,9 +24,11 @@
         <span></span>
       </button>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html#top">About</a>
-        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
         <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
       </nav>
     </header>
 
@@ -36,13 +38,17 @@
         <div class="company-hero-card project-detail-card">
           <div class="project-detail-visual project-media-safe-flight" aria-hidden="true"></div>
           <div class="company-copy">
-            <p class="eyebrow">Project</p>
+            <p class="eyebrow">App Case Study</p>
             <h1>Safe Flight Application</h1>
             <p>
               A travel safety web application that scores destinations using real-time event,
               weather, advisory, and risk data.
             </p>
             <div class="company-meta-grid">
+              <div>
+                <span>Category</span>
+                <strong>Application</strong>
+              </div>
               <div>
                 <span>Stack</span>
                 <strong>React, Flask, MongoDB</strong>
@@ -56,12 +62,45 @@
         </div>
       </section>
 
-      <section class="detail-section">
-        <div class="detail-section-heading">
-          <p class="eyebrow">Full Project Points</p>
-          <h2>Build Notes</h2>
+      <section class="photoshare-capabilities" aria-labelledby="safe-flight-overview-title">
+        <div class="photoshare-section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2 id="safe-flight-overview-title">A compact risk signal dashboard for travel decisions.</h2>
+          <p>
+            The project combines destination risk inputs, account handling, and authentication into
+            a single web application for evaluating travel safety.
+          </p>
         </div>
-        <div class="detail-panel">
+        <div class="photoshare-capability-grid">
+          <article>
+            <span>01</span>
+            <h3>Destination Scoring</h3>
+            <p>Scores destinations based on real-time weather, crime, conflict, and political risk signals.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>API Integrations</h3>
+            <p>Uses Airlabs and Travel Advisory data to support destination safety assessments.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Accounts</h3>
+            <p>Stores user accounts and preferences with MongoDB-backed application data.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Authentication</h3>
+            <p>Integrates Google Cloud Identity/OAuth for secure account access.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="photoshare-implementation" aria-labelledby="safe-flight-build-title">
+        <div class="photoshare-implementation-panel">
+          <div class="photoshare-section-heading">
+            <p class="eyebrow">Build Notes</p>
+            <h2 id="safe-flight-build-title">Implementation Details</h2>
+          </div>
           <ul class="detail-point-list">
             <li>Developed a web application using React.js and Flask that assesses the safety of destinations based on real-time events.</li>
             <li>Integrated Airlabs and Travel Advisory APIs to score destinations based on weather, crime, conflicts, and political risk.</li>

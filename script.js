@@ -2,7 +2,7 @@ const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector(".site-nav");
 
 menuButton?.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
+  const isOpen = nav?.classList.toggle("is-open") ?? false;
   menuButton.setAttribute("aria-expanded", String(isOpen));
   menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
 });
@@ -33,9 +33,11 @@ const setGallerySlide = (index) => {
 
   galleryImage.setAttribute("src", activeThumb.dataset.src ?? "");
   galleryImage.setAttribute("alt", activeThumb.dataset.alt ?? "");
+
   if (galleryTitle) {
     galleryTitle.textContent = activeThumb.dataset.title ?? "";
   }
+
   if (galleryCaption) {
     galleryCaption.textContent = activeThumb.dataset.caption ?? "";
   }

@@ -29,75 +29,364 @@
       </button>
 
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#top">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
+
     </header>
 
     <main id="top">
-      <section class="hero profile-hero" aria-labelledby="hero-title">
-        <p class="section-title hero-section-title">About</p>
-
-        <div class="hero-content profile-intro">
-          <h1 id="hero-title">Kevin Kim</h1>
-          <p class="hero-copy">
-            Software engineer focused on building practical web applications, internal tools,
-            automations, and reliable systems that turn ambiguous problems into clear workflows.
-          </p>
-
-          <div class="profile-facts" aria-label="Education and location">
-            <div>
-              <span>Graduated</span>
-              <strong>Boston University</strong>
-              <p>B.A. Computer Science, 2024</p>
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy-panel">
+            <p class="kicker">Software Engineer / Atlanta, GA</p>
+            <h1>Reliable software, clean systems, practical product experiences.</h1>
+            <p class="hero-copy">
+              I build web applications, internal tools, automations, and gameplay systems that turn
+              ambiguous problems into clear, dependable workflows.
+            </p>
+            <div class="button-row" aria-label="Primary links">
+              <a class="button button-primary" href="#projects">View Projects</a>
+              <a class="button" href="mailto:kevkim1201@gmail.com">Email Me</a>
+              <a
+                class="button"
+                href="https://github.com/kevkim12"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
             </div>
-            <div>
-              <span>Location</span>
-              <strong>Atlanta, GA</strong>
+            <div class="hero-meta-grid" aria-label="Profile highlights">
+              <div>
+                <span>Education</span>
+                <strong>Boston University</strong>
+                <p>B.A. Computer Science, 2024</p>
+              </div>
+              <div>
+                <span>Current</span>
+                <strong>Software Engineer</strong>
+                <p>Qcells</p>
+              </div>
+              <div>
+                <span>Focus</span>
+                <strong>Web apps and systems</strong>
+                <p>Backend, UI, automation, tooling</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="profile-card" aria-label="Kevin Kim profile card">
+            <div class="profile-photo-frame">
+              <img src="assets/kevin-kim.jpg" alt="Kevin Kim" class="profile-photo" />
+            </div>
+            <div class="profile-card-content">
+              <div>
+                <p class="eyebrow">Portfolio</p>
+                <h2>Kevin Kim</h2>
+              </div>
+              <p>
+                Detail-oriented engineer with experience across enterprise systems, full-stack web
+                projects, and Roblox gameplay development.
+              </p>
+              <div class="social-links" aria-label="Social links">
+                <a
+                  href="https://github.com/kevkim12"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  title="GitHub"
+                >
+                  <img src="assets/github.svg" alt="" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/kevkim12"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <img src="assets/linkedin.svg" alt="" />
+                </a>
+                <a href="mailto:kevkim1201@gmail.com" aria-label="Email" title="Email">
+                  <img src="assets/email.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="shell about-grid">
+          <div class="feature-card">
+            <div class="section-header">
+              <p class="eyebrow">About</p>
+              <h2>Engineering with strong product sense and disciplined execution.</h2>
+            </div>
+            <p>
+              I’m a software engineer who enjoys making complex workflows feel straightforward.
+              My work spans Spring MVC enterprise systems, React and Flask applications, API
+              integrations, deployment workflows, test coverage, and game systems built with Lua
+              and Rojo.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>How I Work</h3>
+            <ul class="feature-list">
+              <li>Translate unclear requirements into reliable, maintainable workflows.</li>
+              <li>Improve systems through profiling, validation, and careful refactoring.</li>
+              <li>Keep user-facing interfaces clean, responsive, and easy to scan.</li>
+              <li>Balance implementation speed with quality, testing, and deployment readiness.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="shell">
+          <div class="section-header">
+            <p class="eyebrow">Skills</p>
+            <h2>Tech stack grouped by the way I use it.</h2>
+            <p>
+              A practical mix of application development, backend services, databases, deployment
+              tools, and game-development workflows.
+            </p>
+          </div>
+
+          <div class="tech-panel" aria-label="Technologies and tools">
+            <div class="tech-board">
+              <article>
+                <h3>Languages</h3>
+                <div class="tech-list">
+                  <span>JavaScript</span>
+                  <span>TypeScript</span>
+                  <span>Java</span>
+                  <span>Python</span>
+                  <span>SQL</span>
+                  <span>C</span>
+                  <span>Lua</span>
+                  <span>HTML/CSS</span>
+                </div>
+              </article>
+              <article>
+                <h3>Frameworks</h3>
+                <div class="tech-list">
+                  <span>Spring</span>
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>Django</span>
+                  <span>Flask</span>
+                  <span>Rojo</span>
+                </div>
+              </article>
+              <article>
+                <h3>Databases</h3>
+                <div class="tech-list">
+                  <span>Oracle Database</span>
+                  <span>MySQL</span>
+                  <span>MongoDB</span>
+                  <span>Redis</span>
+                  <span>SQLite</span>
+                </div>
+              </article>
+              <article>
+                <h3>Tools</h3>
+                <div class="tech-list">
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>Docker</span>
+                  <span>AWS</span>
+                  <span>Jenkins</span>
+                  <span>Swagger/OpenAPI</span>
+                  <span>Postman</span>
+                  <span>DataGrip</span>
+                  <span>IntelliJ</span>
+                  <span>VS Code</span>
+                  <span>Eclipse</span>
+                  <span>Confluence</span>
+                  <span>NemoClaw</span>
+                  <span>Codex</span>
+                </div>
+              </article>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="profile-photo-panel">
-          <div class="profile-photo-frame">
-            <img src="assets/kevin-kim.jpg" alt="Kevin Kim" class="profile-photo" />
+      <section id="projects" class="section project-section">
+        <div class="shell">
+          <div class="section-header">
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects separated into Apps and Games.</h2>
+            <p>
+              Each card uses the same structure so new projects can be added without breaking the
+              grid: summary, stack, and clear links.
+            </p>
           </div>
-          <div class="social-links" aria-label="Social links">
-            <a
-              href="https://github.com/kevkim12"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              title="GitHub"
-            >
-              <img src="assets/github.svg" alt="" />
-              <span class="sr-only">GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kevkim12"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              title="LinkedIn"
-            >
-              <img src="assets/linkedin.svg" alt="" />
-              <span class="sr-only">LinkedIn</span>
-            </a>
-            <a href="mailto:kevkim1201@gmail.com" aria-label="Email" title="Email">
-              <img src="assets/email.svg" alt="" />
-              <span class="sr-only">Email</span>
-            </a>
+
+          <div class="project-category" aria-labelledby="apps-title">
+            <div class="category-heading">
+              <div>
+                <p class="eyebrow">Apps</p>
+                <h3 id="apps-title">Applications, tools, and web products</h3>
+              </div>
+              <p>Web apps, utilities, API-backed products, and practical software systems.</p>
+            </div>
+
+            <div class="project-grid" aria-label="Application projects">
+              <article class="project-card">
+                <div
+                  class="project-card-media project-media-screenshot project-media-photoshare-thumb"
+                  aria-hidden="true"
+                >
+                  <img src="assets/photoshare/home-public.png" alt="" />
+                </div>
+                <div class="project-card-body">
+                  <p class="eyebrow">App</p>
+                  <h3>PhotoShare</h3>
+                  <p>
+                    Flask photo-sharing app with albums, uploads, tagging, comments, likes,
+                    friends, search, leaderboards, and recommendations.
+                  </p>
+                  <div class="project-tags" aria-label="PhotoShare technologies">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>Jinja</span>
+                    <span>SQL</span>
+                  </div>
+                  <div class="card-actions">
+                    <a class="project-link" href="photoshare/index.html">Case Study</a>
+                    <a
+                      class="button"
+                      href="https://github.com/kevkim12/photo-sharing-website"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div
+                  class="project-card-media project-media-screenshot project-media-jobnow-thumb"
+                  aria-hidden="true"
+                >
+                  <img src="assets/jobnow/screenshots/01-home.png" alt="" />
+                </div>
+                <div class="project-card-body">
+                  <p class="eyebrow">App</p>
+                  <h3>JobNow</h3>
+                  <p>
+                    Work marketplace for flexible local gigs and longer-term roles with saved gigs,
+                    account flows, and JSearch-powered listings.
+                  </p>
+                  <div class="project-tags" aria-label="JobNow technologies">
+                    <span>React</span>
+                    <span>Vite</span>
+                    <span>Flask</span>
+                    <span>SQLite</span>
+                  </div>
+                  <div class="card-actions">
+                    <a class="project-link" href="jobnow/index.html">Case Study</a>
+                    <a
+                      class="button"
+                      href="https://jobnow.onrender.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Live Site
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-card-media project-media-safe-flight" aria-hidden="true"></div>
+                <div class="project-card-body">
+                  <p class="eyebrow">App</p>
+                  <h3>Safe Flight Application</h3>
+                  <p>
+                    Travel safety app that scores destinations using real-time weather, advisory,
+                    crime, conflict, and political risk signals.
+                  </p>
+                  <div class="project-tags" aria-label="Safe Flight technologies">
+                    <span>React</span>
+                    <span>Flask</span>
+                    <span>MongoDB</span>
+                    <span>OAuth</span>
+                  </div>
+                  <div class="card-actions">
+                    <a class="project-link" href="safe-flight/index.html">Case Study</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="project-category" aria-labelledby="games-title">
+            <div class="category-heading">
+              <div>
+                <p class="eyebrow">Games</p>
+                <h3 id="games-title">Gameplay systems and interactive work</h3>
+              </div>
+              <p>Roblox projects, game systems, prototypes, and player-facing experiences.</p>
+            </div>
+
+            <div class="project-grid project-grid--games" aria-label="Game projects">
+              <article class="project-card">
+                <div
+                  class="project-card-media project-media-screenshot project-media-nightfall-thumb"
+                  aria-hidden="true"
+                >
+                  <img
+                    src="https://user-images.githubusercontent.com/113711991/228656394-b8d8ac9a-ffe3-4b0b-b818-f09fe4e614f8.png"
+                    alt=""
+                  />
+                </div>
+                <div class="project-card-body">
+                  <p class="eyebrow">Game</p>
+                  <h3>Nightfall</h3>
+                  <p>
+                    Round-based zombie shooter with scalable game systems, dynamic NPC behavior,
+                    pathfinding, and hardened server-side validation.
+                  </p>
+                  <div class="project-tags" aria-label="Nightfall technologies">
+                    <span>Lua</span>
+                    <span>Rojo</span>
+                    <span>Roblox Studio</span>
+                    <span>Blender</span>
+                  </div>
+                  <div class="card-actions">
+                    <a class="project-link" href="nightfall/index.html">Case Study</a>
+                    <a
+                      class="button"
+                      href="https://github.com/kevkim12/nightfall-video-game"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="experience" class="section">
-        <div class="section-heading">
-          <h2 class="section-title">Experience</h2>
-        </div>
+        <div class="shell">
+          <div class="section-header">
+            <p class="eyebrow">Experience</p>
+            <h2>Professional work across product systems and game development.</h2>
+          </div>
 
-        <div class="career-grid">
           <div class="experience-ledger" aria-label="Work experience timeline">
             <article class="experience-row">
               <img
@@ -121,7 +410,7 @@
                 </div>
                 <div class="accomplishment-block">
                   <ul>
-                    <li>Temporary placeholder for gameplay systems, debugging, optimization, and release support.</li>
+                    <li>Current role focused on gameplay systems, debugging, optimization, and release support.</li>
                   </ul>
                 </div>
               </div>
@@ -213,128 +502,39 @@
             </article>
           </div>
         </div>
+      </section>
 
-        <aside id="skills" class="tech-panel" aria-label="Technologies and tools">
-          <p class="eyebrow">Technologies &amp; Tools</p>
-          <div class="tech-board">
-            <article>
-              <h3>Languages</h3>
-              <div class="tech-list">
-                <span>JavaScript</span>
-                <span>TypeScript</span>
-                <span>Java</span>
-                <span>Python</span>
-                <span>SQL</span>
-                <span>C</span>
-                <span>Lua</span>
-                <span>HTML/CSS</span>
-              </div>
-            </article>
-            <article>
-              <h3>Frameworks</h3>
-              <div class="tech-list">
-                <span>Spring</span>
-                <span>React</span>
-                <span>Next.js</span>
-                <span>Django</span>
-                <span>Flask</span>
-                <span>Rojo</span>
-              </div>
-            </article>
-            <article>
-              <h3>Databases</h3>
-              <div class="tech-list">
-                <span>Oracle Database</span>
-                <span>MySQL</span>
-                <span>MongoDB</span>
-                <span>Redis</span>
-              </div>
-            </article>
-            <article>
-              <h3>Tools</h3>
-              <div class="tech-list">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Docker</span>
-                <span>AWS</span>
-                <span>Jenkins</span>
-                <span>Swagger/OpenAPI</span>
-                <span>Postman</span>
-                <span>DataGrip</span>
-                <span>IntelliJ</span>
-                <span>VS Code</span>
-                <span>Eclipse</span>
-                <span>Confluence</span>
-                <span>NemoClaw</span>
-                <span>Codex</span>
-              </div>
-            </article>
+      <section id="contact" class="section">
+        <div class="shell contact-panel">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something practical, polished, and reliable.</h2>
+            <p>
+              Reach out by email or connect through GitHub and LinkedIn. I’m always interested in
+              thoughtful engineering work, product systems, and tools that make workflows clearer.
+            </p>
           </div>
-        </aside>
-      </section>
-
-      <section id="projects" class="section project-section">
-        <div class="section-heading">
-          <h2 class="section-title">Projects</h2>
-        </div>
-
-        <div class="project-grid" aria-label="Selected projects">
-          <article class="project-card">
-            <div class="project-card-media project-media-screenshot project-media-photoshare-thumb" aria-hidden="true">
-              <img src="assets/photoshare/home-public.png" alt="" />
-            </div>
-            <div class="project-card-body">
-              <h3>PhotoShare</h3>
-              <p>
-                Flask photo-sharing app with albums, uploads, tagging, comments, likes, friends,
-                search, leaderboards, and recommendations.
-              </p>
-              <a class="project-link" href="photoshare/index.html">View more</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card-media project-media-screenshot project-media-jobnow-thumb" aria-hidden="true">
-              <img src="assets/jobnow/screenshots/01-home.png" alt="" />
-            </div>
-            <div class="project-card-body">
-              <h3>JobNow</h3>
-              <p>
-                Work marketplace for flexible local gigs and longer-term roles with saved gigs,
-                account flows, and JSearch-powered listings.
-              </p>
-              <a class="project-link" href="jobnow/index.html">View more</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card-media project-media-safe-flight" aria-hidden="true"></div>
-            <div class="project-card-body">
-              <h3>Safe Flight Application</h3>
-              <p>
-                Travel safety app that scores destinations using real-time weather, advisory,
-                crime, conflict, and political risk signals.
-              </p>
-              <a class="project-link" href="safe-flight/index.html">View more</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card-media project-media-screenshot project-media-nightfall-thumb" aria-hidden="true">
-              <img
-                src="https://user-images.githubusercontent.com/113711991/228656394-b8d8ac9a-ffe3-4b0b-b818-f09fe4e614f8.png"
-                alt=""
-              />
-            </div>
-            <div class="project-card-body">
-              <h3>Nightfall</h3>
-              <p>
-                Round-based zombie shooter with scalable game systems, dynamic NPC behavior,
-                pathfinding, and hardened server-side validation.
-              </p>
-              <a class="project-link" href="nightfall/index.html">View more</a>
-            </div>
-          </article>
+          <div class="button-row" aria-label="Contact links">
+            <a class="button button-primary" href="mailto:kevkim1201@gmail.com">Email</a>
+            <a
+              class="button"
+              href="https://github.com/kevkim12"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              class="button"
+              href="https://www.linkedin.com/in/kevkim12"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </section>
-
     </main>
 
     <footer class="site-footer">
