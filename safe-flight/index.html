@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kevin Kim's Safe Flight Application project." />
-    <title>Safe Flight Application | Kevin Kim</title>
+    <meta name="description" content="Kevin Kim's Safe Flight project." />
+    <title>Safe Flight | Kevin Kim</title>
     <link rel="icon" href="data:," />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
+  <body class="project-detail-page">
     <header class="site-header">
       <a class="brand" href="../index.html#top" aria-label="Kevin Kim home">
         <span class="brand-mark">KK</span>
@@ -31,43 +31,251 @@
       </nav>
     </header>
 
-    <main class="detail-main">
-      <section class="company-hero">
-        <a class="back-link" href="../index.html#projects">Back to projects</a>
-        <div class="company-hero-card project-detail-card">
-          <div class="project-detail-visual project-media-safe-flight" aria-hidden="true"></div>
-          <div class="company-copy">
-            <p class="eyebrow">Project</p>
-            <h1>Safe Flight Application</h1>
-            <p>
-              A travel safety web application that scores destinations using real-time event,
-              weather, advisory, and risk data.
+    <main class="detail-main photoshare-page safeflight-page">
+      <section class="photoshare-hero">
+        <a class="back-link photoshare-back" href="../index.html#projects">Back to projects</a>
+        <div class="photoshare-hero-panel">
+          <div class="photoshare-intro">
+            <p class="eyebrow">Project Case Study</p>
+            <h1>Safe Flight</h1>
+            <p class="photoshare-lede">
+              A travel risk planning website that helps users review destination safety before
+              booking or departing. Safe Flight presents country risk levels in a polished
+              travel-service interface, supports searchable destination data, and lets users save
+              countries to a personal watchlist with a regular email and password account.
             </p>
-            <div class="company-meta-grid">
-              <div>
-                <span>Stack</span>
-                <strong>React, Flask, MongoDB</strong>
-              </div>
-              <div>
-                <span>Focus</span>
-                <strong>Risk scoring, OAuth, API integrations</strong>
-              </div>
+            <div class="photoshare-stack-line" aria-label="Technology stack">
+              <span>Built with</span>
+              <ul>
+                <li>React 18</li>
+                <li>React Router</li>
+                <li>Axios</li>
+                <li>Python 3.11</li>
+                <li>Flask</li>
+                <li>PyMongo</li>
+                <li>MongoDB</li>
+              </ul>
             </div>
+            <a
+              class="repo-button repo-button-strong"
+              href="https://github.com/kevkim12/SafeFlight"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="../assets/github.svg" alt="" />
+              <span>View GitHub</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="detail-section">
-        <div class="detail-section-heading">
-          <p class="eyebrow">Full Project Points</p>
-          <h2>Build Notes</h2>
+      <section class="photoshare-showcase-section" aria-labelledby="safeflight-interface-title">
+        <div class="photoshare-section-heading">
+          <p class="eyebrow">Interface Tour</p>
+          <h2 id="safeflight-interface-title">Primary Pages</h2>
+          <p>
+            The current UI uses a modern corporate travel style with a dark navigation bar, strong
+            editorial hero sections, clean data tables, country flag imagery, and responsive layouts
+            for desktop and mobile.
+          </p>
         </div>
-        <div class="detail-panel">
-          <ul class="detail-point-list">
-            <li>Developed a web application using React.js and Flask that assesses the safety of destinations based on real-time events.</li>
-            <li>Integrated Airlabs and Travel Advisory APIs to score destinations based on weather, crime, conflicts, and political risk.</li>
-            <li>Implemented a user account system with MongoDB for storing accounts and preferences.</li>
-            <li>Integrated Google Cloud Identity/OAuth for secure authentication.</li>
+
+        <div class="photoshare-gallery-layout">
+          <section class="photoshare-showcase" aria-label="Safe Flight screenshot preview">
+            <div class="gallery-window">
+              <div class="gallery-browser-bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="gallery-stage">
+                <img
+                  src="../assets/safe-flight/safe-flight-home.png"
+                  alt="Safe Flight home page"
+                  data-gallery-image
+                />
+                <button
+                  class="gallery-control gallery-control-prev"
+                  type="button"
+                  aria-label="Previous screenshot"
+                  data-gallery-prev
+                >
+                  &lt;
+                </button>
+                <button
+                  class="gallery-control gallery-control-next"
+                  type="button"
+                  aria-label="Next screenshot"
+                  data-gallery-next
+                >
+                  &gt;
+                </button>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <strong data-gallery-title>Home</strong>
+              <span data-gallery-caption>Travel-service landing page with destination safety positioning.</span>
+            </div>
+          </section>
+
+          <div class="gallery-thumbs" aria-label="Choose screenshot">
+            <button
+              class="is-active"
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/safe-flight/safe-flight-home.png"
+              data-alt="Safe Flight home page"
+              data-title="Home"
+              data-caption="Travel-service landing page with destination safety positioning."
+            >
+              <img src="../assets/safe-flight/safe-flight-home.png" alt="" />
+              <span>Home</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/safe-flight/safe-flight-risk-search.png"
+              data-alt="Safe Flight risk search page"
+              data-title="Risk Search"
+              data-caption="Searchable country risk table with flag imagery and scannable risk badges."
+            >
+              <img src="../assets/safe-flight/safe-flight-risk-search.png" alt="" />
+              <span>Risk Search</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/safe-flight/safe-flight-watchlist.png"
+              data-alt="Safe Flight watchlist page"
+              data-title="Watchlist"
+              data-caption="Saved destination view for tracking countries a user wants to revisit."
+            >
+              <img src="../assets/safe-flight/safe-flight-watchlist.png" alt="" />
+              <span>Watchlist</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/safe-flight/safe-flight-account.png"
+              data-alt="Safe Flight account page"
+              data-title="Account"
+              data-caption="Regular local account flow using email and password credentials."
+            >
+              <img src="../assets/safe-flight/safe-flight-account.png" alt="" />
+              <span>Account</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/safe-flight/safe-flight-about.png"
+              data-alt="Safe Flight about page"
+              data-title="About"
+              data-caption="Informational page explaining the product and travel-risk context."
+            >
+              <img src="../assets/safe-flight/safe-flight-about.png" alt="" />
+              <span>About</span>
+            </button>
+            <button
+              type="button"
+              data-gallery-thumb
+              data-src="../assets/safe-flight/safe-flight-contact.png"
+              data-alt="Safe Flight contact page"
+              data-title="Contact"
+              data-caption="Responsive contact page within the broader travel-service experience."
+            >
+              <img src="../assets/safe-flight/safe-flight-contact.png" alt="" />
+              <span>Contact</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="photoshare-capabilities" aria-labelledby="safeflight-features-title">
+        <div class="photoshare-section-heading">
+          <p class="eyebrow">Features</p>
+          <h2 id="safeflight-features-title">What It Covers</h2>
+        </div>
+        <div class="photoshare-capability-grid">
+          <article>
+            <span>01</span>
+            <h3>Destination Search</h3>
+            <p>Search and filter countries by destination name and risk level.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Risk Badges</h3>
+            <p>View destination risk categories with scannable badges and country flag imagery.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Watchlist</h3>
+            <p>Save destinations to a personal watchlist tied to a local email and password account.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Reliable Fallback</h3>
+            <p>Use sample destination data when live advisory APIs are unavailable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="photoshare-capabilities" aria-labelledby="safeflight-stack-title">
+        <div class="photoshare-section-heading">
+          <p class="eyebrow">Technologies Used</p>
+          <h2 id="safeflight-stack-title">Frontend, Backend, and Data</h2>
+        </div>
+        <div class="safeflight-tech-grid">
+          <article>
+            <h3>Frontend</h3>
+            <div class="tech-list">
+              <span>React 18</span>
+              <span>React Router</span>
+              <span>Axios</span>
+              <span>Inter web font</span>
+              <span>Web Crypto API</span>
+              <span>Local Storage</span>
+              <span>Create React App</span>
+            </div>
+          </article>
+          <article>
+            <h3>Backend</h3>
+            <div class="tech-list">
+              <span>Python 3.11</span>
+              <span>Flask</span>
+              <span>PyMongo</span>
+              <span>MongoDB</span>
+              <span>Requests</span>
+              <span>python-decouple</span>
+              <span>Pipenv</span>
+            </div>
+          </article>
+          <article>
+            <h3>APIs</h3>
+            <div class="tech-list">
+              <span>AirLabs API</span>
+              <span>Travel Advisory API</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="photoshare-implementation" aria-labelledby="safeflight-build-title">
+        <div class="photoshare-implementation-panel">
+          <div class="photoshare-section-heading">
+            <p class="eyebrow">Build Notes</p>
+            <h2 id="safeflight-build-title">Implementation Details</h2>
+            <p>
+              Safe Flight pairs a React client with Flask API services, MongoDB-backed account
+              data, destination-risk integrations, and fallback data paths so the main search
+              experience remains usable even when external advisory data is unavailable.
+            </p>
+          </div>
+          <ul class="detail-point-list photoshare-point-list">
+            <li>Built responsive React routes for the home, risk search, watchlist, account, about, and contact pages.</li>
+            <li>Implemented searchable and filterable country-risk tables with flag imagery and scannable risk badges.</li>
+            <li>Created local email and password account flows using browser storage and Web Crypto APIs for client-side credential handling.</li>
+            <li>Connected Flask, PyMongo, MongoDB, Requests, AirLabs API, and Travel Advisory API paths for destination-risk data.</li>
+            <li>Added fallback sample destinations so the Risk Search page still works when live advisory APIs are unavailable.</li>
           </ul>
         </div>
       </section>
