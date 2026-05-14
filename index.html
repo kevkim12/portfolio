@@ -279,60 +279,118 @@
           <h2 class="section-title">Projects</h2>
         </div>
 
-        <div class="project-grid" aria-label="Selected projects">
-          <article class="project-card">
-            <div class="project-card-media project-media-screenshot project-media-photoshare-thumb" aria-hidden="true">
-              <img src="assets/photoshare/home-public.png" alt="" />
-            </div>
-            <div class="project-card-body">
-              <h3>PhotoShare</h3>
-              <p>
-                Flask photo-sharing app with albums, uploads, tagging, comments, likes, friends,
-                search, leaderboards, and recommendations.
-              </p>
-              <a class="project-link" href="photoshare/index.html">View more</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card-media project-media-screenshot project-media-jobnow-thumb" aria-hidden="true">
-              <img src="assets/jobnow/screenshots/01-home.png" alt="" />
-            </div>
-            <div class="project-card-body">
-              <h3>JobNow</h3>
-              <p>
-                Work marketplace for flexible local gigs and longer-term roles with saved gigs,
-                account flows, and JSearch-powered listings.
-              </p>
-              <a class="project-link" href="jobnow/index.html">View more</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card-media project-media-safe-flight" aria-hidden="true"></div>
-            <div class="project-card-body">
-              <h3>Safe Flight Application</h3>
-              <p>
-                Travel safety app that scores destinations using real-time weather, advisory,
-                crime, conflict, and political risk signals.
-              </p>
-              <a class="project-link" href="safe-flight/index.html">View more</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card-media project-media-screenshot project-media-nightfall-thumb" aria-hidden="true">
-              <img
-                src="https://user-images.githubusercontent.com/113711991/228656394-b8d8ac9a-ffe3-4b0b-b818-f09fe4e614f8.png"
-                alt=""
-              />
-            </div>
-            <div class="project-card-body">
-              <h3>Nightfall</h3>
-              <p>
-                Round-based zombie shooter with scalable game systems, dynamic NPC behavior,
-                pathfinding, and hardened server-side validation.
-              </p>
-              <a class="project-link" href="nightfall/index.html">View more</a>
-            </div>
-          </article>
+        <div class="project-tabs" role="tablist" aria-label="Project categories">
+          <button
+            class="project-tab is-active"
+            id="projects-apps-tab"
+            type="button"
+            role="tab"
+            aria-controls="projects-apps-panel"
+            aria-selected="true"
+          >
+            Apps
+          </button>
+          <button
+            class="project-tab"
+            id="projects-games-tab"
+            type="button"
+            role="tab"
+            aria-controls="projects-games-panel"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Games
+          </button>
+        </div>
+
+        <div
+          class="project-tab-panel"
+          id="projects-apps-panel"
+          role="tabpanel"
+          aria-labelledby="projects-apps-tab"
+        >
+          <div class="project-grid" aria-label="App projects">
+            <article class="project-card">
+              <div
+                class="project-card-media project-media-screenshot project-media-photoshare-thumb"
+                aria-hidden="true"
+              >
+                <img src="assets/photoshare/home-public.png" alt="" />
+              </div>
+              <div class="project-card-body">
+                <h3>PhotoShare</h3>
+                <p>
+                  Flask photo-sharing app with albums, uploads, tagging, comments, likes, friends,
+                  search, leaderboards, and recommendations.
+                </p>
+                <a class="project-link" href="photoshare/index.html">View more</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card-media project-media-screenshot project-media-jobnow-thumb" aria-hidden="true">
+                <img src="assets/jobnow/screenshots/01-home.png" alt="" />
+              </div>
+              <div class="project-card-body">
+                <h3>JobNow</h3>
+                <p>
+                  Work marketplace for flexible local gigs and longer-term roles with saved gigs,
+                  account flows, and JSearch-powered listings.
+                </p>
+                <a class="project-link" href="jobnow/index.html">View more</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card-media project-media-safe-flight" aria-hidden="true"></div>
+              <div class="project-card-body">
+                <h3>Safe Flight Application</h3>
+                <p>
+                  Travel safety app that scores destinations using real-time weather, advisory,
+                  crime, conflict, and political risk signals.
+                </p>
+                <a class="project-link" href="safe-flight/index.html">View more</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div
+          class="project-tab-panel"
+          id="projects-games-panel"
+          role="tabpanel"
+          aria-labelledby="projects-games-tab"
+          hidden
+        >
+          <div class="project-grid" aria-label="Game projects">
+            <article class="project-card">
+              <div class="project-card-media project-media-screenshot project-media-nightfall-thumb" aria-hidden="true">
+                <img
+                  src="https://user-images.githubusercontent.com/113711991/228656394-b8d8ac9a-ffe3-4b0b-b818-f09fe4e614f8.png"
+                  alt=""
+                />
+              </div>
+              <div class="project-card-body">
+                <h3>Nightfall</h3>
+                <p>
+                  Round-based zombie shooter with scalable game systems, dynamic NPC behavior,
+                  pathfinding, and hardened server-side validation.
+                </p>
+                <a class="project-link" href="nightfall/index.html">View more</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card-media project-media-screenshot project-media-cyrus-thumb" aria-hidden="true">
+                <img src="assets/cyrus-vii/hero-arcadia-01.png" alt="" />
+              </div>
+              <div class="project-card-body">
+                <h3>Cyrus VII</h3>
+                <p>
+                  Halo-inspired multiplayer Roblox game set on Arcadia with faction point control,
+                  vehicle combat, drop pods, and 163,186 total visits.
+                </p>
+                <a class="project-link" href="cyrus-vii/index.html">View more</a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 

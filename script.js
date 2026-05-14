@@ -51,3 +51,36 @@ galleryThumbs.forEach((thumb, index) => {
 
 galleryPrev?.addEventListener("click", () => setGallerySlide(activeGalleryIndex - 1));
 galleryNext?.addEventListener("click", () => setGallerySlide(activeGalleryIndex + 1));
+
+const projectTabs = [...document.querySelectorAll("[role='tab'][aria-controls^='projects-']")];
+
+const setProjectTab = (activeTab) => {
+  projectTabs.forEach((tab) => {
+    const isActive = tab === activeTab;
+    const panelId = tab.getAttribute("aria-controls");
+    const panel = panelId ? document.getElementById(panelId) : null;
+
+    tab.classList.toggle("is-active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+    tab.setAttribute("tabindex", isActive ? "0" : "-1");
+
+    if (panel) {
+      panel.hidden = !isActive;
+    }
+  });
+};
+
+projectTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => setProjectTab(tab));
+  tab.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") {
+      return;
+    }
+
+    event.preventDefault();
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const nextTab = projectTabs[(index + direction + projectTabs.length) % projectTabs.length];
+    nextTab.focus();
+    setProjectTab(nextTab);
+  });
+});

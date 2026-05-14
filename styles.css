@@ -606,6 +606,50 @@ h1 {
   gap: 18px;
 }
 
+.project-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 22px;
+  border: 1px solid #000;
+  background: var(--surface);
+}
+
+.project-tab {
+  min-height: 46px;
+  padding: 12px 18px;
+  border: 0;
+  border-right: 1px solid #000;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.project-tab:last-child {
+  border-right: 0;
+}
+
+.project-tab.is-active {
+  color: var(--surface);
+  background: var(--ink);
+}
+
+.project-tab:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.project-tab-panel[hidden] {
+  display: none;
+}
+
 .project-card {
   display: flex;
   min-height: 430px;
@@ -722,6 +766,14 @@ h1 {
 
 .project-media-nightfall-thumb img {
   object-fit: contain;
+}
+
+.project-media-cyrus-thumb {
+  background: #101214;
+}
+
+.project-media-cyrus-thumb img {
+  object-position: center;
 }
 
 .project-media-photoshare-thumb img {
@@ -1506,6 +1558,251 @@ h1 {
   outline: none;
 }
 
+.cyrus-page {
+  background:
+    linear-gradient(135deg, rgba(21, 163, 148, 0.08), transparent 32%),
+    linear-gradient(315deg, rgba(242, 184, 75, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(255, 106, 85, 0.05), transparent 44%);
+}
+
+.cyrus-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.cyrus-stat-grid article {
+  min-height: 112px;
+  padding: 16px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.cyrus-stat-grid span,
+.cyrus-video-card span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cyrus-stat-grid strong {
+  display: block;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.25;
+}
+
+.cyrus-info-grid article {
+  min-height: 230px;
+}
+
+.cyrus-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cyrus-team-card {
+  grid-column: span 2;
+  min-height: 280px;
+  padding: 20px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(17, 20, 24, 0.055);
+}
+
+.cyrus-team-card-compact {
+  min-height: 170px;
+}
+
+.cyrus-team-card h3,
+.cyrus-system-panel h3 {
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.cyrus-team-card p,
+.cyrus-system-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.cyrus-tree,
+.cyrus-tree ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cyrus-tree ul {
+  margin-top: 8px;
+  margin-left: 4px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(17, 20, 24, 0.16);
+}
+
+.cyrus-tree li {
+  position: relative;
+  min-width: 0;
+  padding-left: 14px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.cyrus-tree li::before {
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  content: "";
+  background: var(--teal);
+}
+
+.cyrus-drop-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.35fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.cyrus-system-panel {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(17, 20, 24, 0.055);
+}
+
+.cyrus-system-panel .repo-button {
+  margin-top: 6px;
+}
+
+.cyrus-page .gallery-stage {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    #101214;
+  background-size: 30px 30px;
+}
+
+.cyrus-page .gallery-stage img {
+  padding: 0;
+  object-fit: contain;
+}
+
+.cyrus-page .gallery-thumbs {
+  max-height: 560px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.cyrus-video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cyrus-video-card {
+  display: grid;
+  gap: 11px;
+  align-content: start;
+  min-height: 260px;
+  padding: 12px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(17, 20, 24, 0.055);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.cyrus-video-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.cyrus-video-card strong {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.cyrus-video-card:hover,
+.cyrus-video-card:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(21, 163, 148, 0.44);
+  box-shadow: 5px 5px 0 rgba(21, 163, 148, 0.2);
+  outline: none;
+}
+
+.cyrus-archive-panel {
+  gap: 20px;
+}
+
+.cyrus-image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.cyrus-image-grid figure {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgba(17, 20, 24, 0.12);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.cyrus-image-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.cyrus-image-grid figcaption {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cyrus-image-wide {
+  grid-column: span 4;
+}
+
+.cyrus-image-wide img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
 .company-logo-large {
   width: 104px;
   height: 104px;
@@ -1667,6 +1964,16 @@ h1 {
   .nightfall-card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .cyrus-stat-grid,
+  .cyrus-video-grid,
+  .cyrus-image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cyrus-image-wide {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -1717,10 +2024,16 @@ h1 {
   .company-hero-card,
   .detail-role-block,
   .nightfall-content-layout,
+  .cyrus-drop-layout,
+  .cyrus-team-grid,
   .photoshare-hero-panel,
   .photoshare-gallery-layout,
   .photoshare-implementation-panel {
     grid-template-columns: 1fr;
+  }
+
+  .cyrus-team-card {
+    grid-column: auto;
   }
 
   .screenshot-gallery {
@@ -1885,6 +2198,22 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .cyrus-stat-grid,
+  .cyrus-video-grid,
+  .cyrus-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cyrus-image-wide {
+    grid-column: auto;
+  }
+
+  .cyrus-page .gallery-thumbs {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+  }
+
   .photoshare-capability-grid article {
     min-height: auto;
   }
@@ -1954,6 +2283,13 @@ h1 {
 .nightfall-equipment-strip figure,
 .nightfall-equipment-strip img,
 .nightfall-map-grid img,
+.cyrus-stat-grid article,
+.cyrus-team-card,
+.cyrus-system-panel,
+.cyrus-video-card,
+.cyrus-video-card img,
+.cyrus-image-grid figure,
+.cyrus-image-grid img,
 .company-logo-large,
 .company-meta-grid div,
 .detail-panel,
