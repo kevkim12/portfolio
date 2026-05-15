@@ -10,6 +10,7 @@
   --amber: #f2b84b;
   --green: #8ee86f;
   --shadow: 0 22px 70px rgba(17, 20, 24, 0.12);
+  --frame-shadow: 7px 7px 0 rgba(17, 20, 24, 0.12);
   --radius: 0px;
   --page-gutter: clamp(32px, 7vw, 128px);
   --content-max: 1180px;
@@ -2544,6 +2545,44 @@ h1 {
   border-width: 1px;
   border-color: #000;
   border-radius: 0;
+}
+
+.site-header,
+.profile-hero .hero-section-title,
+.profile-facts div,
+.experience-row,
+.tech-panel,
+.project-card,
+.company-hero-card,
+.photoshare-hero-panel,
+.photoshare-showcase,
+.photoshare-capability-grid article,
+.photoshare-implementation-panel,
+.safeflight-tech-grid article,
+.nightfall-card-grid article,
+.nightfall-equipment-panel,
+.nightfall-map-panel,
+.cyrus-team-card,
+.cyrus-system-panel,
+.cyrus-video-card,
+.detail-panel {
+  box-shadow: var(--frame-shadow);
+}
+
+.experience-row .experience-logo,
+.tech-panel .tech-board article,
+.company-hero-card .project-detail-visual,
+.company-hero-card .company-logo-large,
+.company-hero-card .company-meta-grid div,
+.detail-panel .detail-point-list li,
+.photoshare-hero-panel .cyrus-stat-grid article,
+.photoshare-showcase .gallery-window,
+.photoshare-implementation-panel .detail-point-list li,
+.photoshare-implementation-panel .nightfall-clip-panel,
+.photoshare-implementation-panel .cyrus-image-grid figure,
+.nightfall-equipment-panel .nightfall-equipment-strip figure,
+.nightfall-map-panel .nightfall-map-grid article {
+  box-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
