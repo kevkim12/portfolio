@@ -405,7 +405,20 @@ h1 {
   content: "-";
 }
 
+.experience-logo-link {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  line-height: 0;
+}
+
+.experience-logo-link:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+}
+
 .experience-logo {
+  display: block;
   width: 60px;
   height: 60px;
   border: 1px solid var(--line);
@@ -505,6 +518,23 @@ h1 {
   border-radius: 1px;
   content: "";
   background: var(--teal);
+}
+
+.accomplishment-block li a {
+  color: #0f7f74;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: rgba(21, 163, 148, 0.6);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.accomplishment-block li a:hover,
+.accomplishment-block li a:focus-visible {
+  color: var(--ink);
+  text-decoration-color: var(--coral);
+  outline: none;
 }
 
 .experience-link {
