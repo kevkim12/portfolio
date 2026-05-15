@@ -61,16 +61,17 @@ a {
   position: sticky;
   top: 14px;
   z-index: 20;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  min-height: 76px;
+  gap: 24px;
+  min-height: 62px;
   margin: 14px var(--content-pad) 0;
-  padding: 0 16px;
-  border: 1px solid rgba(17, 20, 24, 0.12);
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 18px 48px rgba(17, 20, 24, 0.1);
-  backdrop-filter: blur(18px);
+  padding: 0 18px;
+  border: 1px solid #000;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--frame-shadow);
+  backdrop-filter: blur(14px);
 }
 
 .project-detail-page .site-header {
@@ -85,61 +86,107 @@ a {
 }
 
 .brand {
-  gap: 12px;
+  gap: 10px;
+  min-height: 44px;
   color: var(--ink);
   font-weight: 800;
   letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.brand-copy {
+  display: block;
+  line-height: 1;
+}
+
+.brand-copy span:first-child {
+  font-size: 0.96rem;
+}
+
+.brand-copy span:last-child {
+  display: none;
+}
+
+.brand:hover .brand-mark,
+.brand:focus-visible .brand-mark {
+  background: var(--teal);
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
 }
 
 .brand-mark {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   place-items: center;
-  border: 2px solid var(--ink);
+  border: 1px solid var(--ink);
   border-radius: var(--radius);
   color: var(--surface);
   background: var(--ink);
   font-size: 0.82rem;
+  transition: background 180ms ease;
 }
 
 .site-nav {
-  gap: 10px;
+  grid-column: 3;
+  justify-self: end;
+  gap: clamp(22px, 2.6vw, 36px);
 }
 
 .site-nav a {
-  min-height: 48px;
-  padding: 14px 16px;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 800;
-  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 0;
+  border: 0;
+  color: #525c68;
+  background: transparent;
+  font-size: 0.86rem;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  transition: color 180ms ease, opacity 180ms ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: var(--ink);
-  border-color: rgba(21, 163, 148, 0.38);
-  background: rgba(21, 163, 148, 0.1);
+  opacity: 1;
   outline: none;
 }
 
-.site-nav a:first-child {
+.site-nav a.is-active {
   color: var(--ink);
-  border-color: rgba(17, 20, 24, 0.14);
-  background: rgba(17, 20, 24, 0.06);
+}
+
+.site-nav a.is-active::after {
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: var(--teal);
 }
 
 .menu-button {
   display: none;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(17, 20, 24, 0.14);
-  border-radius: 2px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
   background: var(--surface);
   cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.menu-button:hover,
+.menu-button:focus-visible {
+  background: rgba(21, 163, 148, 0.1);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .menu-button span {
@@ -148,6 +195,15 @@ a {
   height: 2px;
   margin: 5px auto;
   background: var(--ink);
+  transition: transform 180ms ease;
+}
+
+.menu-button[aria-expanded="true"] span:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] span:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
 }
 
 .hero {
@@ -2289,24 +2345,40 @@ h1 {
 
 @media (max-width: 760px) {
   .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
     min-height: 64px;
     margin-inline: 12px;
+    padding: 0 10px 0 14px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .menu-button {
+    grid-column: 2;
     display: block;
+    flex: 0 0 auto;
   }
 
   .site-nav {
     position: fixed;
     inset: 88px 12px auto;
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
     display: grid;
-    gap: 4px;
-    padding: 10px;
-    border: 1px solid rgba(17, 20, 24, 0.12);
-    border-radius: 2px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid #000;
     background: rgba(255, 255, 255, 0.96);
-    box-shadow: var(--shadow);
+    box-shadow: var(--frame-shadow);
     transform: translateY(-14px);
     opacity: 0;
     pointer-events: none;
@@ -2320,8 +2392,14 @@ h1 {
   }
 
   .site-nav a {
-    width: 100%;
-    min-height: 44px;
+    justify-content: flex-start;
+    width: fit-content;
+    min-height: 30px;
+    color: #525c68;
+  }
+
+  .site-nav a.is-active::after {
+    bottom: 1px;
   }
 
   .hero {

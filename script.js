@@ -15,6 +15,46 @@ nav?.addEventListener("click", (event) => {
   }
 });
 
+const navLinks = [...document.querySelectorAll(".site-nav a")];
+const localNavSections = navLinks
+  .map((link) => {
+    const url = new URL(link.href);
+    const id = url.hash.slice(1);
+    const section = id ? document.getElementById(id) : null;
+    return section && url.pathname === window.location.pathname ? { link, section } : null;
+  })
+  .filter(Boolean);
+
+const setActiveNavLink = (activeLink) => {
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", link === activeLink);
+  });
+};
+
+if (localNavSections.length > 0) {
+  setActiveNavLink(localNavSections[0].link);
+
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visibleEntry) {
+        return;
+      }
+
+      const activeSection = localNavSections.find(({ section }) => section === visibleEntry.target);
+      if (activeSection) {
+        setActiveNavLink(activeSection.link);
+      }
+    },
+    { rootMargin: "-24% 0px -54% 0px", threshold: [0.1, 0.35, 0.6] }
+  );
+
+  localNavSections.forEach(({ section }) => navObserver.observe(section));
+}
+
 const galleryImage = document.querySelector("[data-gallery-image]");
 const galleryTitle = document.querySelector("[data-gallery-title]");
 const galleryCaption = document.querySelector("[data-gallery-caption]");
