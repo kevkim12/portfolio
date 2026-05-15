@@ -468,6 +468,10 @@ h1 {
   margin-bottom: 18px;
 }
 
+#projects .section-heading {
+  margin-bottom: 18px;
+}
+
 .career-grid {
   display: block;
 }
@@ -754,36 +758,63 @@ h1 {
 }
 
 .project-tabs {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0;
-  margin-bottom: 22px;
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(118px, 1fr));
+  gap: 5px;
+  width: fit-content;
+  margin-bottom: 26px;
+  padding: 5px;
   border: 1px solid #000;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .project-tab {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
   min-height: 46px;
-  padding: 12px 18px;
-  border: 0;
-  border-right: 1px solid #000;
-  color: var(--ink);
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  color: var(--muted);
   background: transparent;
   font: inherit;
-  font-size: 0.76rem;
+  font-size: 0.9rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  letter-spacing: 0;
   cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
-.project-tab:last-child {
-  border-right: 0;
+.project-tab:hover {
+  color: var(--ink);
+  background: rgba(21, 163, 148, 0.08);
 }
 
 .project-tab.is-active {
   color: var(--surface);
+  border-color: #000;
   background: var(--ink);
+}
+
+.project-tab-count {
+  display: inline-grid;
+  min-width: 26px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid currentColor;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.project-tab.is-active .project-tab-count {
+  border-color: var(--surface);
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .project-tab:focus-visible {
@@ -2466,6 +2497,15 @@ h1 {
 @media (max-width: 560px) {
   .experience-row {
     grid-template-columns: 1fr;
+  }
+
+  .project-tabs {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-tab {
+    justify-content: center;
   }
 
   .experience-logo,
