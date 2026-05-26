@@ -77,6 +77,66 @@
             <li>Led CI/CD pipeline updates with Jenkins and validated secure deployments via Swagger/OpenAPI endpoints.</li>
             <li>Optimized the main alert-handling service by reducing transaction latency by 90% through APM-driven thread analysis, manual Oracle Database commits, and streamlined message dispatch.</li>
           </ul>
+          <div class="detail-year-block">
+            <h3>2026</h3>
+            <ul class="detail-point-list">
+              <li>Designed, deployed, and maintained an internal AI-agent platform for manufacturing software development using OpenClaw, NemoClaw, Docker, Discord integration, database tools, and hosted/local LLM providers.</li>
+              <li>Migrated AI-agent workflows into a secure sandboxed environment, improving reliability, access control, backup strategy, and maintainability for internal engineering use.</li>
+              <li>Built a manufacturing software AI-agent dashboard with service health checks, token/cost tracking, response-time metrics, audit logs, database transaction logs, file-management tools, feedback logging, and multi-agent support.</li>
+              <li>Integrated AI agents with DEV and PROD Oracle databases to support production-data investigation, troubleshooting, and manufacturing software analysis.</li>
+              <li>Implemented prompt-injection protections to prevent unauthorized users from reading or modifying AI-agent memory, knowledge-base files, and internal documentation.</li>
+              <li>Developed the IQC NCR Management page, including service-side logic, Oracle table design, query setup, error-code documentation, and production deployment support.</li>
+              <li>Created a standardized manufacturing software error logging framework with structured error codes, error categories, transaction timestamps, and optional alerting.</li>
+              <li>Built an Error Log Search page to help engineers search, review, and troubleshoot standardized manufacturing software errors.</li>
+              <li>Refactored and optimized manufacturing software UI/service code for equipment, material history, module kitting, and RF-tag workflows to improve maintainability and performance.</li>
+              <li>Implemented a fault-tolerance fix that prevented Truck Scale server failures from blocking other manufacturing software services from restarting.</li>
+              <li>Supported production deployments, rollback activities, server restarts, and post-deployment monitoring for critical manufacturing software applications.</li>
+              <li>Assisted with technical hiring by preparing coding interview questions, evaluating candidate solutions, and improving the software-engineering interview process.</li>
+            </ul>
+          </div>
+          <div class="detail-year-block">
+            <h3>2025</h3>
+            <ul class="detail-point-list">
+              <li>Developed, enhanced, and deployed manufacturing software applications across production, quality, packing, repair, equipment, inventory, inspection, and Cell Stocker operations.</li>
+              <li>Built and deployed multiple operator-facing and engineer-facing pages, including Manual String Repair Registration, Back EL Bypass Data Insertion, Module Sub-ID Search, Equipment Preventive Inspection, Module Repair Result, Manual Cell Transfer, and Cell Stocker reporting tools.</li>
+              <li>Designed and implemented Oracle database tables, queries, and service models for repair workflows, inspection workflows, FQC judgment, equipment inspection, Cell Stocker operations, and Junction Box defect registration.</li>
+              <li>Developed FQC Judgment Grading Port Automation, including automation toggles, port setup logic, option persistence, save-logic updates, and factory-line validation with Quality engineers.</li>
+              <li>Improved FQC judgment reliability by implementing logic for Hi-Pot failures, missing inspection history, rework-grade handling, sorted power values, popup behavior, and port-assignment workflows.</li>
+              <li>Built and tested Module Packing Validation and Packing List Validation tools with production users to reduce manual errors and improve packing verification accuracy.</li>
+              <li>Developed Equipment Preventive Inspection functionality with registration, search, update, image upload, image viewing, database integration, user testing, and production deployment.</li>
+              <li>Developed Cell Stocker software features including efficiency-band setup, manual cell transfer, cell discharge transfer requests, product-order popup updates, cell validation, and in/out summary reporting.</li>
+              <li>Implemented socket-based UI refresh, timer-based error detection, Excel upload validation, automatic data retrieval, and user-friendly grid behavior for Cell Stocker workflows.</li>
+              <li>Built Junction Box Mis-Solder and Junction Box Mis-Solder Leaks registration pages, including database-table proposals, user testing, feedback implementation, and user guides.</li>
+              <li>Developed and optimized Telegram-based manufacturing software alarms and reports, including production-yield reports, equipment run/down/up alarms, configurable downtime alarms, and FQC rework alerts.</li>
+              <li>Investigated and resolved production issues involving database row locks, FQC port mismatches, SAP interface errors, pallet interface checks, Excel service memory failures, equipment data gaps, expired tokens, and missing equipment messages.</li>
+              <li>Created extensive technical documentation covering troubleshooting, batch jobs, server management, Telegram alarms, RFID structure, database tables, developer resources, Cell Stocker workflows, and FQC judgment logic.</li>
+              <li>Created a standardized peer-review checklist and performed code reviews to improve defect prevention, user experience, and production-readiness.</li>
+              <li>Trained and supported other engineers on manufacturing software development, report setup, permissions, Git branch issues, service development, and manufacturing-process knowledge.</li>
+              <li>Supported recurring production deployments, hotfixes, rollbacks, server restarts, and post-deployment monitoring for manufacturing software systems.</li>
+            </ul>
+          </div>
+          <div class="detail-year-block">
+            <h3>2024</h3>
+            <ul class="detail-point-list">
+              <li>Developed and enhanced manufacturing software UI, service, operator, and reporting pages for production, quality, inspection, packing, repair, downtime, alarm, and yield workflows.</li>
+              <li>Implemented Module Packing validation functionality with bulk checks, validation queries, and production-floor testing support.</li>
+              <li>Built Packing List Validation functionality to improve packing verification and reduce manual processing errors.</li>
+              <li>Developed Module Sub-ID Search to retrieve LAMA ID, Cell ID, and String ID information from module Lot IDs.</li>
+              <li>Improved Excel export functionality across multiple manufacturing software report pages, including operation reports and inspection-result reports.</li>
+              <li>Reworked Tabber String NG reporting logic by revising defect-code handling, renaming undefined codes, updating SQL logic, and aligning report results with equipment data.</li>
+              <li>Updated defect-reporting logic so reports counted highest-priority error codes instead of raw defect-cell counts, improving data accuracy for quality analysis.</li>
+              <li>Developed and improved Hourly Front EL Defect Status, Hourly Back EL Defect Status, and Hourly Matrix EL Defect Status reports using Tabber-based data sources.</li>
+              <li>Built Line Downtime Management and Line Downtime Report functionality, including shift filters, sortable columns, service-side logic, and shift-aligned search behavior.</li>
+              <li>Developed Soldering Defect Report functionality and supported database reporting for Junction Box soldering defect positions.</li>
+              <li>Modified manufacturing software alarm and production-yield reports, including hourly, daily, and shift Telegram report messages.</li>
+              <li>Improved View Alarm Status with recalculated time-difference logic, symbol updates, and min/max alarm filtering.</li>
+              <li>Improved View Equipment Operation Rate charts and grids by adjusting chart labels, resizing visuals, and handling no-result cases.</li>
+              <li>Developed Hourly String Repair Report and Hourly Repair Layup Report in collaboration with process engineers.</li>
+              <li>Investigated missing String Repair data and identified equipment-message gaps as the root cause.</li>
+              <li>Resolved manufacturing software library import issues by analyzing dependency changes and adding required JAR files as referenced libraries.</li>
+              <li>Supported production deployments, Jenkins deployment/testing workflows, error-log monitoring, production validation, and post-deployment troubleshooting.</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
